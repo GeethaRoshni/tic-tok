@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class GameService {
   playersArray = [
-    {name: 'Player 1', symbol: 'X'},
-    {name: 'Player 2', symbol: 'O'}
+    {id: 1, name: 'Player 1', symbol: 'X'},
+    {id: 2, name: 'Player 2', symbol: 'O'}
   ]
 
   constructor() { }

@@ -1,5 +1,9 @@
 <li>
-    <span class="player">PLAYER 1 <span class="player-symbol">X</span></span>
-    <button>Edit</button>
-    
+    <span class="player">
+        <span class="player-name" *ngIf="!isEdit">{{playerName}}</span>
+        <input type="text" *ngIf="isEdit" [(ngModel)]="playerName">
+        <span class="player-symbol">{{playerSymbol}}</span>
+    </span>
+    <button (click)="editName()">{{isEdit ? 'Save' : 'Edit'}}</button>
+
 </li>

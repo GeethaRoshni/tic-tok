@@ -5,8 +5,10 @@
 <main>
   <div id="game-container">
     <ol id="players">
-      <app-player></app-player>
-      <app-player></app-player>
+      <ng-container *ngFor="let player of playerList; let i=index">
+        <app-player [playerName]="player.name" [playerSymbol]="player.symbol" (playerNameEmt)="updatePalyerName($event, i)"> </app-player>
+      </ng-container>
     </ol>
+    <app-game-board></app-game-board>
   </div>
 </main>
