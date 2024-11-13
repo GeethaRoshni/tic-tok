@@ -1,3 +1,10 @@
-<div id="game-board">
+<ol id="game-board">
+    <li *ngFor="let row of gameBoard; let rowIndex = index">
+       <ol>
+        <li *ngFor="let playerSymbol of row; let colIndex = index">
+            <button (click)="updateGameBoard(rowIndex, colIndex)">{{playerSymbol}}</button>
+        </li>
+       </ol>
+    </li>
+</ol>
 
-</div>

@@ -15,14 +15,18 @@ import { GameBoardComponent } from './game-board/game-board.component';
 export class AppComponent {
   title = 'tiktokGame';
   playerList;
-
+  initialGameBoard = [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null]
+  ]
 
   constructor(private gameService: GameService) {
     this.playerList = gameService.playersArray;
   }
 
   updatePalyerName(event, index) {
-  
+
     // name is in event
     // update latest name in this.playerList
 

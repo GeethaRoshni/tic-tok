@@ -4,11 +4,13 @@
 </header>
 <main>
   <div id="game-container">
-    <ol id="players">
+    <ol id="players" className='highlight-player'>
       <ng-container *ngFor="let player of playerList; let i=index">
-        <app-player [playerName]="player.name" [playerSymbol]="player.symbol" (playerNameEmt)="updatePalyerName($event, i)"> </app-player>
+        <app-player [playerName]="player.name" [playerSymbol]="player.symbol"
+          (playerNameEmt)="updatePalyerName($event, i)"> </app-player>
       </ng-container>
     </ol>
-    <app-game-board></app-game-board>
+    <app-game-board [gameBoard]="initialGameBoard
+    "></app-game-board>
   </div>
 </main>
